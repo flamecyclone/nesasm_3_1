@@ -61,7 +61,7 @@ struct t_opcode base_inst[57] = {
 };
 
 /* pseudo instruction table */
-struct t_opcode base_pseudo[78] = {
+struct t_opcode base_pseudo[79] = {
 	{NULL,  "=",       do_equ,     PSEUDO, P_EQU,     0},
 
 	{NULL,  "BANK",    do_bank,    PSEUDO, P_BANK,    0},
@@ -77,7 +77,7 @@ struct t_opcode base_pseudo[78] = {
 	{NULL,  "ENDIF",   do_endif,   PSEUDO, P_ENDIF,   0},
 	{NULL,  "ENDM",    do_endm,    PSEUDO, P_ENDM,    0},
 	{NULL,  "ENDP",    do_endp,    PSEUDO, P_ENDP,    P_PROC},
-{NULL, "ENDPROCGROUP", do_endp,    PSEUDO, P_ENDPG,   P_PGROUP},
+    {NULL, "ENDPROCGROUP", do_endp,    PSEUDO, P_ENDPG,   P_PGROUP},
 	{NULL,  "EQU",     do_equ,     PSEUDO, P_EQU,     0},
 	{NULL,  "FAIL",    do_fail,    PSEUDO, P_FAIL,    0},
 	{NULL,  "FUNC",    do_func,    PSEUDO, P_FUNC,    0},
@@ -97,11 +97,12 @@ struct t_opcode base_pseudo[78] = {
 	{NULL,  "ORG",     do_org,     PSEUDO, P_ORG,     0},
 	{NULL,  "PAGE",    do_page,    PSEUDO, P_PAGE,    0},
 	{NULL,  "PROC",    do_proc,    PSEUDO, P_PROC,    P_PROC},
-  {NULL,  "PROCGROUP", do_proc,    PSEUDO, P_PGROUP,  P_PGROUP},
+    {NULL,  "PROCGROUP", do_proc,    PSEUDO, P_PGROUP,  P_PGROUP},
 	{NULL,  "RSSET",   do_rsset,   PSEUDO, P_RSSET,   0},
 	{NULL,  "RS",      do_rs,      PSEUDO, P_RS,      0},
 	{NULL,  "WORD",    do_dw,      PSEUDO, P_DW,      0},
 	{NULL,  "ZP",      do_section, PSEUDO, P_ZP,      S_ZP},
+    {NULL,  "STR",     do_str,     PSEUDO, P_STR,     0},
 
 	{NULL, ".BANK",    do_bank,    PSEUDO, P_BANK,    0},
 	{NULL, ".BSS",     do_section, PSEUDO, P_BSS,     S_BSS},
@@ -115,7 +116,7 @@ struct t_opcode base_pseudo[78] = {
 	{NULL, ".ENDIF",   do_endif,   PSEUDO, P_ENDIF,   0},
 	{NULL, ".ENDM",    do_endm,    PSEUDO, P_ENDM,    0},
 	{NULL, ".ENDP",    do_endp,    PSEUDO, P_ENDP,    P_PROC},
-{NULL, ".ENDPROCGROUP",do_endp,    PSEUDO, P_ENDPG,   P_PGROUP},
+    {NULL, ".ENDPROCGROUP",do_endp,    PSEUDO, P_ENDPG,   P_PGROUP},
 	{NULL, ".EQU",     do_equ,     PSEUDO, P_EQU,     0},
 	{NULL, ".FAIL",    do_fail,    PSEUDO, P_FAIL,    0},
 	{NULL, ".FUNC",    do_func,    PSEUDO, P_FUNC,    0},
@@ -135,7 +136,7 @@ struct t_opcode base_pseudo[78] = {
 	{NULL, ".ORG",     do_org,     PSEUDO, P_ORG,     0},
 	{NULL, ".PAGE",    do_page,    PSEUDO, P_PAGE,    0},
 	{NULL, ".PROC",    do_proc,    PSEUDO, P_PROC,    P_PROC},
-  {NULL, ".PROCGROUP", do_proc,    PSEUDO, P_PGROUP,  P_PGROUP},
+    {NULL, ".PROCGROUP", do_proc,    PSEUDO, P_PGROUP,  P_PGROUP},
 	{NULL, ".RSSET",   do_rsset,   PSEUDO, P_RSSET,   0},
 	{NULL, ".RS",      do_rs,      PSEUDO, P_RS,      0},
 	{NULL, ".WORD",    do_dw,      PSEUDO, P_DW,      0},
