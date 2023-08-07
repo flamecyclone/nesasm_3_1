@@ -177,7 +177,7 @@ nes_inesprg(int *ip)
 	if (!evaluate(ip, ';'))
 		return;
 
-	if ((value < 0) || (value > 64)) 
+	if ((value < 0) || (value > 0xEFF)) 
 	{
 		error("PRG bank value out of range!");
 	

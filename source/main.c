@@ -225,8 +225,8 @@ main(int argc, char **argv)
 	}
 
 	/* clear the ROM array */
-	memset(rom, 0xFF, 8192 * 128);
-	memset(map, 0xFF, 8192 * 128);
+	memset(rom, 0xFF, sizeof(rom));
+	memset(map, 0xFF, sizeof(map));
 
 	/* clear symbol hash tables */
 	for (i = 0; i < 256; i++) {
@@ -257,8 +257,8 @@ main(int argc, char **argv)
 	max_zp = 0x01;
 	max_bss = 0x0201;
 	max_bank = 0;
-	rom_limit = 0x100000;		/* 1MB */
-	bank_limit = 0x7F;
+	rom_limit = 0x2000000;		/* 32MB */
+	bank_limit = 0xFFF;
 	bank_base = 0;
 	errcnt = 0;
 
